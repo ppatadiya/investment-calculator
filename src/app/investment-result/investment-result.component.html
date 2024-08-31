@@ -1,3 +1,4 @@
+<!--{{calculateInvestmentResult}}-->
 <table>
     <thead>
       <tr>
@@ -9,26 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>2023</td>
-        <td>$10,000</td>
-        <td>$500</td>
-        <td>$500</td>
-        <td>$10,000</td>
-      </tr>
-      <tr>
-        <td>2024</td>
-        <td>$10,500</td>
-        <td>$525</td>
-        <td>$1,025</td>
-        <td>$10,000</td>
-      </tr>
-      <tr>
-        <td>2025</td>
-        <td>$11,025</td>
-        <td>$551</td>
-        <td>$1,576</td>
-        <td>$10,000</td>
+      <tr *ngFor="let data of Finalresult">
+        <td>{{ data.year }}</td>
+        <td>{{ data.valueEndOfYear | currency }}</td>
+        <td>{{ data.interest | currency }}</td>
+        <td>{{ data.annualInvestment | currency }}</td>
+        <td>{{ data.totalAmountInvested | currency }}</td>
       </tr>
     </tbody>
   </table>
