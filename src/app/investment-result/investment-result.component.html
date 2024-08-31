@@ -1,5 +1,5 @@
-<!--{{calculateInvestmentResult}}-->
-<table>
+<div *ngIf="Finalresult?.length != 0; else noDataFound">
+  <table>
     <thead>
       <tr>
         <th>Year</th>
@@ -19,4 +19,12 @@
       </tr>
     </tbody>
   </table>
+
+</div>
+<ng-template #noDataFound>
+  <h3 class="center"> Please enter some data and hit calculate to see results. </h3>
+</ng-template>
+
+
+
   
