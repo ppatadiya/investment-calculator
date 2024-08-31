@@ -1,13 +1,9 @@
 import { Component, EventEmitter, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { type userInputModel } from './user-input.model';
 import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [CommonModule,FormsModule],
+  
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css'
 })
